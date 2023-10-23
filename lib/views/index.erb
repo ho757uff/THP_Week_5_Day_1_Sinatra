@@ -1,10 +1,11 @@
 <html>
   <head>
-    <title>The Gossip Project</title>
+    <title>Accueil - The Gossip Project</title>
   </head>
   <body>
     <h1>Mon super site de gossip, depuis le dossier views !</h1>
-    <a href="/gossips/new/">CREE UN NOUVO POTIN MON GROS</a>
+    <a href="/gossips/new/">Crée un nouveau potin mon gars !</a>
+    
 
     <% gossips.each do |gossip| %>
       <p>
@@ -12,6 +13,8 @@
         <%= gossip.content %>
       </p>
     <% end %>
+  
 
+  <a href="/gossips/show/">Accède à tous nos potins !</a>
   </body>
 </html>

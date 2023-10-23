@@ -21,5 +21,13 @@ class Gossip
     end
     all_gossips
   end
+
+  def self.find(id)
+    CSV.read("./db/gossip.csv").each_with_index do |csv_line, index|
+      if index == id
+        return csv_line
+      end
+    end
+  end
 end # End of class - "Gossip"
 # End of file - "gossip.rb"

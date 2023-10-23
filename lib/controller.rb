@@ -19,7 +19,19 @@ class ApplicationController < Sinatra::Base
 
     puts "Merci pour ton potin copain !" # Ne sert à rien ! Ça va trop vite !
     redirect "/gossips/new/" # ou redirect "/"
+
+    get "/gossips/:id" do
+      erb :show
+      # matches "GET /hello/foo" and "GET /hello/bar"
+      # params['name'] is 'foo' or 'bar'
+      "Ton potin est #{params["id"]}!"
+    end
   end
-end
+  
+  get "/gossips/show/" do
+    erb :show#, locals: {gossips: Gossip.all}
+  end
+end # End of class - "ApplicationController"
+# End of file - "controller.rb"
 
 # binding.pry
