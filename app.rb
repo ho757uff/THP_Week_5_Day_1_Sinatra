@@ -1,7 +1,15 @@
-require 'bundler'
-Bundler.require
+require "sinatra"
 
-$:.unshift File.expand_path("./../lib", __FILE__)
-require 'app/my_project_app'
+class MyProjectApp < Sinatra::Base
+  # set :run, true
 
-#require 'views/my_other_file'
+  get "/" do
+    "Hello World"
+  end
+
+  get "/hello" do
+    "<h1>Hello world ! </h1>"
+  end
+end
+
+MyProjectApp.run! if __FILE__ == $0
