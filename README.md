@@ -5,7 +5,7 @@
 ## Set up instructions
 - Clone this repository on your local machine.
 - Run the `bundle install` command from your terminal to install all the gems that are needed for this project.
-- Run the `ruby main.rb` command from your terminal to start the program.
+- Run the `ruby app.rb` command from your terminal to start the program.
 - Enjoy !
 
 ## Concept

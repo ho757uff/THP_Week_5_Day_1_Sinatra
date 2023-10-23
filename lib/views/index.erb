@@ -6,15 +6,15 @@
     <h1>Mon super site de gossip, depuis le dossier views !</h1>
     <a href="/gossips/new/">Crée un nouveau potin mon gars !</a>
     
+    <ul>
+      <% gossips.each do |gossip| %>
+        <li>
+          <a href="/gossips/<%= gossip.id %>"><%= gossip.content %></a>
+        </li>
+      <% end %>
+    </ul>
 
-    <% gossips.each do |gossip| %>
-      <p>
-        <%= gossip.author %><br/>
-        <%= gossip.content %>
-      </p>
-    <% end %>
-  
 
-  <a href="/gossips/show/">Accède à tous nos potins !</a>
+  <%# <a href="/gossips/show/">Accède à tous nos potins !</a> %>
   </body>
 </html>
