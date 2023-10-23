@@ -9,5 +9,6 @@ gem 'nokogiri'
 gem 'open-uri'
 gem 'sinatra'
 gem 'puma'
-gem 'rackup'
+# gem 'rackup'
 gem 'rerun'
+gem 'rack', '2.2.8'  # Replace '2.2.8' with the appropriate version
