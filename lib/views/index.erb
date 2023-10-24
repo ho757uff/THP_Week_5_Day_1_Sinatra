@@ -9,7 +9,7 @@
     <ul>
       <% gossips.each do |gossip| %>
         <li>
-          <a href="/gossips/<%= gossip.id %>"><%= gossip.content %></a>
+          <a href="/gossips/<%= gossip.id %>"> <%= gossip.author %> - <%= gossip.content %></a>
         </li>
       <% end %>
     </ul>
